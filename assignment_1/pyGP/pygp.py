@@ -130,7 +130,7 @@ class BinaryTree(list):
     def build_program(self, n=0):
         strng = ""
         if n < self.size and self[n] != None:
-            strng = self[n].value
+            strng = self[n].value  # string of the operator, e.g. '+', '**' or 'sin'
             left = self.build_program(2*n+1)
             right = self.build_program(2*n+2)
             strng = "(" + left + strng + right + ")"
